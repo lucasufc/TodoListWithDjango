@@ -1,5 +1,8 @@
 {
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    }
 }
