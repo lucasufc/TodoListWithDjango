@@ -26,7 +26,7 @@
                         <td>
                             <a href="#" class="btn btn-success btn-sm">Concluir</a>
                             <a href="{% url "todo_update" pk=todo.pk %}" class="btn btn-primary btn-sm">Editar</a>
-                            <a href="#" class="btn btn-danger btn-sm">Apagar</a>
+                            <a href="{% url "todo_delete" pk=todo.pk %}" class="btn btn-danger btn-sm">Apagar</a>
                         </td>
                     </tr>
                 {% endfor %}
