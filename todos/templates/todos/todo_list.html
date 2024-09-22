@@ -24,8 +24,8 @@
                         <td class="table-dark">{{ todo.deadline }}</td>
                         <td class="table-dark">{{ todo.finished_at| default:"-" }}</td>
                         <td>
-                            <a href="#" class="btn btn-success btn-sm">Concluir</a>
-                            <a href="{% url "todo_update" pk=todo.pk %}" class="btn btn-primary btn-sm">Editar</a>
+                            <a href="{% url "todo_complete" pk=todo.pk %}" class="btn btn-success btn-sm {% if todo.finished_at %}disabled{% endif %}">Concluir</a>
+                            <a href="{% url "todo_update" pk=todo.pk %}" class="btn btn-primary btn-sm {% if todo.finished_at %}disabled{% endif %} ">Editar</a>
                             <a href="{% url "todo_delete" pk=todo.pk %}" class="btn btn-danger btn-sm">Apagar</a>
                         </td>
                     </tr>
